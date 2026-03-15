@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:digihans.net)",
+      "WebFetch(domain:www.subframe.com)",
+      "WebFetch(domain:www.nobu-restaurants.com)",
+      "WebFetch(domain:www.sugarfishsushi.com)",
+      "WebFetch(domain:www.matsuhisa.com)",
+      "WebFetch(domain:www.ginzasushiko.com)",
+      "WebFetch(domain:www.uchirestaurant.com)",
+      "WebFetch(domain:www.sushisamba.com)",
+      "WebFetch(domain:www.bondst.com)",
+      "WebFetch(domain:www.zumalondon.com)",
+      "WebFetch(domain:saito-sushi.fr)",
+      "WebFetch(domain:www.sushisamurai.fr)",
+      "WebFetch(domain:www.sushishop.fr)",
+      "WebFetch(domain:www.annissushi.com)",
+      "WebFetch(domain:www.tanoshi-sushi.com)",
+      "WebFetch(domain:www.sushiyasuisse.ch)",
+      "WebFetch(domain:www.narisawa-yoshihiro.com)",
+      "WebFetch(domain:www.kazoku-sushi.com)",
+      "WebFetch(domain:www.zarla.com)"
+    ]
+  }
+}
