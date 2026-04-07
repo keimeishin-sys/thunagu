@@ -762,7 +762,7 @@
 
     .team-photo-wrap {
       width: 100%;
-      height: 300px;
+      height: 340px;
       overflow: hidden;
       position: relative;
     }
@@ -778,7 +778,7 @@
       image-rendering: -webkit-optimize-contrast;
     }
 
-    .team-card:hover .team-photo-wrap img { transform: scale(1.08); }
+    .team-card:hover .team-photo-wrap img { transform: scale(1.0); }
 
     .team-photo-fade {
       position: absolute;
@@ -884,12 +884,12 @@
 
     .menu-card:first-child {
       grid-column: span 2;
-      height: 440px;
+      height: 360px;
     }
 
     .menu-card {
       position: relative;
-      height: 370px;
+      height: 300px;
       overflow: hidden;
       cursor: default;
     }
@@ -898,11 +898,12 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center center;
       display: block;
       transition: transform 0.65s ease;
     }
 
-    .menu-card:hover img { transform: scale(1.09); }
+    .menu-card:hover img { transform: scale(1.0); }
 
     .menu-card-overlay {
       position: absolute;
