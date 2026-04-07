@@ -737,9 +737,9 @@
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 28px;
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -1399,7 +1399,7 @@
     ══════════════════════════════════════════ */
     @media (max-width: 1000px) {
       .team-grid { grid-template-columns: 1fr 1fr; }
-      .team-grid .team-card:last-child { grid-column: span 2; }
+      .team-grid .team-card:last-child { grid-column: span 1; }
       .menu-grid { grid-template-columns: 1fr 1fr; }
       .menu-card:first-child { grid-column: span 2; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1649,11 +1649,27 @@
           <div class="team-info">
             <span class="team-role" data-i18n="kotaro_role">PDG · 代表取締役社長</span>
             <h3 class="team-name">Kotaro Shobayashi</h3>
-            <span class="team-name-jp">小林 光太郎</span>
+            <span class="team-name-jp">荘林 幸太郎</span>
             <ul class="team-facts">
               <li data-i18n="kotaro_l1">Ingénieur diplômé de l'EPFL — École Polytechnique de Lausanne</li>
               <li data-i18n="kotaro_l2">Entrepreneur à Belfort, Franche-Comté</li>
               <li data-i18n="kotaro_l3">Grandi en France · actuellement doctorat au Japon</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Fujita Saki ── -->
+        <div class="team-card fade-up">
+          <div class="team-photo-wrap">
+            <img src="saki fujita.jpg" alt="Fujita Saki — 営業" style="object-position: top center;" />
+            <div class="team-photo-fade"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-role" data-i18n="saki_role">営業 · Sales</span>
+            <h3 class="team-name">Saki Fujita</h3>
+            <span class="team-name-jp">藤田 早葵</span>
+            <ul class="team-facts">
+              <li data-i18n="saki_l1">複数言語を用いた交渉を行う</li>
             </ul>
           </div>
         </div>
@@ -1766,41 +1782,21 @@
 
         <div class="ach-card gold-card fade-up">
           <div class="ach-year">2026</div>
-          <span class="ach-tag" data-i18n="ach_tag1">Sélection Officielle</span>
-          <h3 class="ach-title">NOA 2026</h3>
+          <span class="ach-tag" data-i18n="ach_tag1">Festival</span>
+          <h3 class="ach-title">Zénith de Nancy</h3>
           <p class="ach-desc" data-i18n="ach_desc1">
-            Candidature retenue pour les événements food truck NOA 2026.
-            Reconnaissance officielle de la qualité et de l'authenticité de notre offre culinaire japonaise.
-          </p>
-        </div>
-
-        <div class="ach-card fade-up">
-          <div class="ach-year">2026</div>
-          <span class="ach-tag" data-i18n="ach_tag2">Festival</span>
-          <h3 class="ach-title">祭りJAPAN · Belfort</h3>
-          <p class="ach-desc" data-i18n="ach_desc2">
-            Participation au festival japonais 祭りJAPAN à Belfort.
-            Première apparition remarquée de notre food truck — accueil exceptionnel du public français.
+            Participation au grand festival en plein air du Zénith de Nancy.
+            Première apparition remarquée de notre food truck japonais — accueil chaleureux du public français.
           </p>
         </div>
 
         <div class="ach-card fade-up">
           <div class="ach-year">2025</div>
-          <span class="ach-tag" data-i18n="ach_tag3">Traiteur</span>
-          <h3 class="ach-title">Sushi Catering — Inde</h3>
-          <p class="ach-desc" data-i18n="ach_desc3">
+          <span class="ach-tag" data-i18n="ach_tag2">Traiteur</span>
+          <h3 class="ach-title">Food Catering at India</h3>
+          <p class="ach-desc" data-i18n="ach_desc2">
             Notre chef principal Atsuro Yoshida a officié comme chef traiteur sushi pour
-            de grandes firmes japonaises en Inde, apportant l'art du sushi de Ginza à l'international.
-          </p>
-        </div>
-
-        <div class="ach-card fade-up">
-          <div class="ach-year">2024</div>
-          <span class="ach-tag" data-i18n="ach_tag4">Formation</span>
-          <h3 class="ach-title">Académie Sushi · Tokyo</h3>
-          <p class="ach-desc" data-i18n="ach_desc4">
-            Diplôme obtenu à la prestigieuse école de sushi de Tokyo (Shinjuku College).
-            Formation rigoureuse aux techniques traditionnelles japonaises — base de notre excellence.
+            de grandes firmes en Inde, apportant l'art du sushi de Ginza à l'international.
           </p>
         </div>
 
@@ -1942,14 +1938,12 @@
       board_cap:    'メニュー表 · Menu Officiel du Food Truck · 祭りJAPAN',
       ach_eye:      'Nos Événements',
       ach_sub:      'Réalisations &amp; Participations',
-      ach_tag1:     'Sélection Officielle',
-      ach_desc1:    "Candidature retenue pour les événements food truck NOA 2026. Reconnaissance officielle de la qualité et de l'authenticité de notre offre culinaire japonaise.",
-      ach_tag2:     'Festival',
-      ach_desc2:    "Participation au festival japonais 祭りJAPAN à Belfort. Première apparition remarquée — accueil exceptionnel du public français.",
-      ach_tag3:     'Traiteur',
-      ach_desc3:    "Notre chef principal Atsuro Yoshida a officié comme chef traiteur sushi pour de grandes firmes japonaises en Inde, apportant l'art du sushi de Ginza à l'international.",
-      ach_tag4:     'Formation',
-      ach_desc4:    "Diplôme obtenu à la prestigieuse école de sushi de Tokyo (Shinjuku College). Formation rigoureuse aux techniques traditionnelles — base de notre excellence.",
+      ach_tag1:     'Festival',
+      ach_desc1:    "Participation au grand festival en plein air du Zénith de Nancy. Première apparition remarquée de notre food truck japonais — accueil chaleureux du public français.",
+      ach_tag2:     'Traiteur',
+      ach_desc2:    "Notre chef principal Atsuro Yoshida a officié comme chef traiteur sushi pour de grandes firmes en Inde, apportant l'art du sushi de Ginza à l'international.",
+      saki_role:    '営業 · Sales',
+      saki_l1:      'Conduit des négociations en plusieurs langues',
       contact_eye:  'Contact',
       contact_title:'お問い合わせ<br/><em style="font-style:italic;color:var(--gold);font-size:0.7em;">Nous Contacter</em>',
       contact_alt:  '— ou contactez-nous directement —',
@@ -2004,14 +1998,12 @@
       board_cap:    'Official Menu · 祭りJAPAN Food Truck',
       ach_eye:      'Our Events',
       ach_sub:      'Achievements &amp; Appearances',
-      ach_tag1:     'Official Selection',
-      ach_desc1:    "Selected for NOA 2026 food truck events — official recognition of the quality and authenticity of our Japanese culinary offer.",
-      ach_tag2:     'Festival',
-      ach_desc2:    "Participation in the 祭りJAPAN festival in Belfort. Our first remarkable appearance — warmly received by the French public.",
-      ach_tag3:     'Catering',
-      ach_desc3:    "Head chef Atsuro Yoshida served as sushi catering chef for major Japanese corporations in India, bringing Ginza's sushi art internationally.",
-      ach_tag4:     'Training',
-      ach_desc4:    "Diploma earned at the prestigious Tokyo sushi school (Shinjuku College). Rigorous training in traditional Japanese techniques — the foundation of our excellence.",
+      ach_tag1:     'Festival',
+      ach_desc1:    "Participation in the major outdoor festival at Zénith de Nancy. Our first remarkable appearance as a Japanese food truck — warmly received by the French public.",
+      ach_tag2:     'Catering',
+      ach_desc2:    "Head chef Atsuro Yoshida served as sushi catering chef for major firms in India, bringing Ginza's sushi art to the international stage.",
+      saki_role:    'Sales · 営業',
+      saki_l1:      'Conducts negotiations in multiple languages',
       contact_eye:  'Contact',
       contact_title:'Get in Touch<br/><em style="font-style:italic;color:var(--gold);font-size:0.7em;">お問い合わせ</em>',
       contact_alt:  '— or contact us directly —',
@@ -2066,14 +2058,12 @@
       board_cap:    'フードトラック公式メニュー · 祭りJAPAN',
       ach_eye:      '実績・イベント',
       ach_sub:      'これまでの出店実績',
-      ach_tag1:     '公式選考通過',
-      ach_desc1:    'NOA 2026フードトラックイベントの参加候補として選出。日本料理の品質と本格性が高く評価されました。',
-      ach_tag2:     'フェスティバル',
-      ach_desc2:    'ベルフォールの日本フェスティバル「祭りJAPAN」に出店。多くのフランス人のお客様に好評をいただきました。',
-      ach_tag3:     'ケータリング',
-      ach_desc3:    'メインシェフ吉田敦郎がインドの大手日本企業にて寿司ケータリングを担当。銀座の寿司の技を国際的に展開。',
-      ach_tag4:     '研修・資格',
-      ach_desc4:    '東京の一流寿司学校（新宿カレッジ）を卒業。日本の伝統技術を徹底的に習得し、私たちの品質の礎を築きました。',
+      ach_tag1:     'フェスティバル',
+      ach_desc1:    'ナンシーのZénith de Nancyにて大型野外フェスティバルに出店。日本食フードトラックとして初出店し、多くのお客様に好評をいただきました。',
+      ach_tag2:     'ケータリング',
+      ach_desc2:    'メインシェフ吉田敦郎がインドの大手企業向けに寿司ケータリングを担当。銀座の技を国際舞台へ展開。',
+      saki_role:    '営業',
+      saki_l1:      '複数言語を用いた交渉を行う',
       contact_eye:  'お問い合わせ',
       contact_title:'お問い合わせ<br/><em style="font-style:italic;color:var(--gold);font-size:0.7em;">Nous Contacter</em>',
       contact_alt:  '— またはメールで直接ご連絡ください —',
