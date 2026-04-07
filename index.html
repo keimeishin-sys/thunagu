@@ -286,13 +286,7 @@
           rgba(9,9,16,1)    100%
         ),
         url('握り.png') center 35% / cover no-repeat;
-      animation: hero-drift 28s ease-in-out infinite alternate;
-      transform-origin: center;
-    }
-
-    @keyframes hero-drift {
-      from { transform: scale(1.0) translateX(0); }
-      to   { transform: scale(1.02) translateX(-8px); }
+      image-rendering: -webkit-optimize-contrast;
     }
 
     /* Big decorative kanji */
