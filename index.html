@@ -670,7 +670,7 @@
 
     .stat-number {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(44px, 6vw, 72px);
+      font-size: clamp(32px, 4vw, 52px);
       font-weight: 300;
       color: var(--white);
       line-height: 1;
@@ -1570,7 +1570,7 @@
         <span class="stat-label" data-i18n="stat2">Plats au Menu</span>
       </div>
       <div class="stat-item fade-up">
-        <span class="stat-number" data-count="1000"><span>+</span></span>
+        <span class="stat-number" data-count="943"><span>+</span></span>
         <span class="stat-label-jp">来場者数</span>
         <span class="stat-label" data-i18n="stat3">Visiteurs</span>
       </div>
@@ -2177,13 +2177,15 @@
       const end = parseInt(el.dataset.count, 10);
       const suffix = el.querySelector('span') ? el.querySelector('span').outerHTML : '';
       let start = 0;
-      const dur = 1600;
-      const step = Math.ceil(dur / (end * 2));
+      const dur = 900;
+      const steps = 40;
+      const interval = dur / steps;
+      const increment = Math.ceil(end / steps);
       const timer = setInterval(() => {
-        start++;
+        start = Math.min(start + increment, end);
         el.innerHTML = start + suffix;
         if (start >= end) clearInterval(timer);
-      }, step);
+      }, interval);
       counterObserver.unobserve(el);
     });
   }, { threshold: 0.5 });
