@@ -692,6 +692,9 @@
       display: block;
       margin-bottom: 4px;
     }
+    html:not([data-lang="ja"]) .stat-label-jp { display: none; }
+    html:not([data-lang="ja"]) .card-jp { display: none; }
+    [data-lang="ja"] .stat-label { display: none; }
 
     .stat-label {
       font-size: 10px;
@@ -1437,7 +1440,7 @@
 
   <!-- ═══ MOBILE DRAWER ═══ -->
   <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navigation">
-    <a href="#hero"         onclick="closeMobile()">トップ</a>
+    <a href="#hero"         onclick="closeMobile()" data-i18n-mob="nav_top">トップ</a>
     <a href="#team"         onclick="closeMobile()" data-i18n-mob="nav_team">メンバー紹介</a>
     <a href="#menu"         onclick="closeMobile()" data-i18n-mob="nav_menu">メニュー紹介</a>
     <a href="#achievements" onclick="closeMobile()" data-i18n-mob="nav_ach">実績紹介</a>
@@ -1529,7 +1532,7 @@
         <h2 class="section-heading about-title" data-i18n="about_title">
           繋ぐ — Relier le Japon<br/>à la France
         </h2>
-        <p class="about-subtitle-jp">日本とフランスをつなぐ、本格寿司の架け橋</p>
+        <p class="about-subtitle-jp" data-i18n="about_subtitle">日本とフランスをつなぐ、本格寿司の架け橋</p>
 
         <p data-i18n="about_p1">
           <strong>TSUNAGU</strong> (« relier » en japonais) est né d'une passion profonde
@@ -1597,7 +1600,7 @@
           <span class="eyebrow-text" data-i18n="team_eye">L'Équipe</span>
         </div>
         <h2 class="section-heading team-heading">
-          メンバー紹介
+          <span data-i18n="team_heading">Notre Équipe</span>
           <small data-i18n="team_sub">Notre Équipe</small>
         </h2>
         <div class="brush-hr"></div>
@@ -1690,7 +1693,7 @@
         <span class="eyebrow-text" data-i18n="menu_eye">Food Truck Menu</span>
       </div>
       <h2 class="section-heading menu-heading">
-        メニュー紹介
+        <span data-i18n="menu_heading">Notre Menu</span>
         <small data-i18n="menu_sub">Notre Sélection</small>
       </h2>
       <div class="brush-hr"></div>
@@ -1762,7 +1765,7 @@
           <span class="eyebrow-text" data-i18n="ach_eye">Nos Événements</span>
         </div>
         <h2 class="section-heading light ach-heading">
-          実績紹介
+          <span data-i18n="ach_heading">Nos Réalisations</span>
           <small data-i18n="ach_sub">Réalisations &amp; Participations</small>
         </h2>
         <div class="brush-hr"></div>
@@ -1826,7 +1829,7 @@
       <h2 class="contact-heading" data-i18n="contact_title">
         お問い合わせ<br/><em style="font-style:italic; color:var(--gold); font-size:0.7em;">Nous Contacter</em>
       </h2>
-      <span class="contact-heading-jp">お気軽にご連絡ください</span>
+      <span class="contact-heading-jp" data-i18n="contact_jp">N'hésitez pas à nous contacter</span>
 
       <!-- Contact Form -->
       <form class="contact-form fade-up" onsubmit="handleSubmit(event)">
@@ -1913,9 +1916,14 @@
       about_p2:     'Notre food truck propose une expérience sushi véritable, préparée par des chefs formés dans les meilleures académies du Japon. Chaque bouchée est un voyage entre les deux cultures.',
       about_p3:     'Du nigiri traditionnel au donburi savoureux, nous apportons la précision et le savoir-faire japonais directement dans votre assiette, où que vous soyez en France.',
       about_badge:  'Authentique',
+      about_subtitle: 'Le lien culinaire authentique entre le Japon et la France',
       stat1: 'Événements', stat2: 'Plats au Menu', stat3: 'Visiteurs', stat4: 'Pays',
       team_eye:     "L'Équipe",
+      team_heading: 'Notre Équipe',
       team_sub:     'Notre Équipe',
+      menu_heading: 'Notre Menu',
+      ach_heading:  'Nos Réalisations',
+      contact_jp:   "N'hésitez pas à nous contacter",
       atsuro_role:  'Chef Sushi · 寿司職人',
       atsuro_l1:    'Après l\'école de sushi, a exercé en Inde pour du catering de luxe lors de mariages haut de gamme',
       atsuro_l2:    'A travaillé dans un restaurant de sushi étoilé Michelin au Japon',
@@ -1977,9 +1985,14 @@
       about_p2:     'Our food truck offers a genuine sushi experience, crafted by chefs trained at the finest academies in Japan. Every bite is a journey between two cultures.',
       about_p3:     'From traditional nigiri to hearty donburi, we bring Japanese precision and craftsmanship directly to your plate, wherever you are in France.',
       about_badge:  'Authentic',
+      about_subtitle: 'Bridging Japan and France with authentic sushi',
       stat1: 'Events', stat2: 'Menu Items', stat3: 'Visitors', stat4: 'Countries',
       team_eye:     'The Team',
+      team_heading: 'Our Team',
       team_sub:     'Our Members',
+      menu_heading: 'Our Menu',
+      ach_heading:  'Our Achievements',
+      contact_jp:   'Feel free to contact us',
       atsuro_role:  'Sushi Chef · 寿司職人',
       atsuro_l1:    'After sushi school, worked in India providing luxury catering for high-end weddings',
       atsuro_l2:    'Worked at a Michelin-starred sushi restaurant in Japan',
@@ -2041,9 +2054,14 @@
       about_p2:     '私たちのフードトラックは、日本の一流寿司学校で修行を積んだシェフが本格的な寿司体験を提供します。一口ごとに、二つの文化が織りなす旅をお楽しみください。',
       about_p3:     '伝統的な握り寿司から風味豊かな丼物まで、フランスのどこにいても日本の精緻な技術を直接お届けします。',
       about_badge:  '本物',
+      about_subtitle: '日本とフランスをつなぐ、本格寿司の架け橋',
       stat1: '出店イベント', stat2: 'メニュー数', stat3: '来場者数', stat4: '活動国',
       team_eye:     'チーム紹介',
+      team_heading: 'メンバー紹介',
       team_sub:     'メンバー紹介',
+      menu_heading: 'メニュー紹介',
+      ach_heading:  '実績紹介',
+      contact_jp:   'お気軽にご連絡ください',
       atsuro_role:  '寿司職人',
       atsuro_l1:    '寿司学校卒業後、インドで高級ウェディング向けケータリング事業に従事',
       atsuro_l2:    'ミシュラン掲載の寿司レストランで勤務経験あり',
@@ -2104,6 +2122,7 @@
       if (t[k] != null) el.textContent = t[k];
     });
     document.documentElement.lang = lang;
+    document.documentElement.setAttribute('data-lang', lang);
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
